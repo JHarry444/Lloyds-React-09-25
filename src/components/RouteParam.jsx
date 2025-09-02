@@ -5,21 +5,25 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function RouteParam() {
     // useParams -> 'hook' that pulls the parameters out of the router
-    const {name} = useParams();
+    // variable name must match whatever is after the : in the route
+    // i.e. /:name -> { name }
+    //      /:age -> { age }
+    //      /:name/:age -> { name, age }
+    const { name } = useParams();
 
     return (
         <>
             <h2>Route Params</h2>
             {
                 trainers
-                .filter(trainer => trainer.name.toLocaleLowerCase() === name )
-                .map(({ name, age, specialism }) => (
-                    <Trainer
-                        key={uuidv4()}
-                        name={name}
-                        age={age}
-                        specialism={specialism}
-                    />))
+                    .filter(trainer => trainer.name.toLocaleLowerCase() === name)
+                    .map(({ name, age, specialism }) => (
+                        <Trainer
+                            key={uuidv4()}
+                            name={name}
+                            age={age}
+                            specialism={specialism}
+                        />))
             }
         </>
     );

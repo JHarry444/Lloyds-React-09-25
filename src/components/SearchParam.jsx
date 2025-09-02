@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function SearchParam() {
     // useSearchParams -> 'hook' that pulls the SEARCH parameters out of the router
+    // uses the URLSearchParams class from vanilla JS
     const [query] = useSearchParams();
     
     return (

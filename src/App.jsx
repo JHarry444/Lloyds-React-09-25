@@ -13,14 +13,15 @@ import Navigation from './components/Navigation';
 function App() {
 
   return (
+    // Enables routing (Routes, Route and Link compnents MUST be inside one of these)
     <Router>
-      <Navigation />
-      <Routes>
-        <Route path='/' element={<Home />} />
+      <Navigation /> {/* Navigation is on every page so must be OUTSIDE the Routes component */}
+      <Routes> {/* Basically a switch case for Route that renders the correct one by matching its path to the current URL */}
+        <Route path='/' element={<Home />} /> {/* Links a particualr React component to a particular path (URL) */}
         <Route path='/props' element={<PropsExample />} />
         <Route path='/external' element={<ExternalData />} />
-        <Route path='/params/:name' element={<RouteParam />} />
-        <Route path='/search' element={<SearchParam />} />
+        <Route path='/params/:name' element={<RouteParam />} /> {/* Data can be passed through to the element using params designated with a : */}
+        <Route path='/search' element={<SearchParam />} /> {/* Don't need to do anything here if you're using search params */}
         <Route path='/external' element={<ExternalData />} />
         <Route path='/images' element={<img src={me} alt="cheeky chappy" />} />
         <Route path='/components' element={<>
