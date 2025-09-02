@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Jordan",
+        "age": 31,
+        "specialism": "Java"
+    },
+    {
+        "name": "Shafeeq",
+        "age": 40,
+        "specialism": "Oracle"
+    }
+]
