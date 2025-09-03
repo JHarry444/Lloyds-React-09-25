@@ -6,16 +6,18 @@ export default function TrainerList({ trainers }) {
     return (
         <div>
             <h3>Trainers</h3>
-            {
-                trainers.map(({ name, age, specialism }) => (
-                    <Trainer
-                        key={uuid4()}
-                        name={name}
-                        age={age}
-                        specialism={specialism}
-                    />
-                ))
-            }
+            <div className='trainerList'>
+                {
+                    trainers.map(({ name, age, specialism }) => (
+                        <Trainer
+                            key={uuid4()}
+                            name={name}
+                            age={age}
+                            specialism={specialism}
+                        />
+                    ))
+                }
+            </div>
         </div>
     )
 }

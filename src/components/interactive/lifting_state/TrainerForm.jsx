@@ -16,7 +16,7 @@ export default function TrainerForm({ setTrainers }) {
         //     newTrainersArray.push({ name, age, specialism })
         //     return newTrainersArray;
         // })
-        setTrainers(currentTrainers => [{ name, age, specialism }, ...currentTrainers]);
+        setTrainers(currentTrainers => [ ...currentTrainers, { name, age, specialism }]);
         setName("");
         setAge(0);
         setSpecialism("");

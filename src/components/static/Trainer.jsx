@@ -32,12 +32,12 @@ export default function Trainer({ name, age, specialism, picture }) {
     // )
 
         return (
-        <>
+        <div>
             <p>Name: {name}</p>
             <p>Age: {age}</p>
             <p>Specialism: {specialism}</p>
             {picture && <img src={picture} width={"50px"} />}
-        </>
+        </div>
     )
 }
 
