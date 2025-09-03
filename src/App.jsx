@@ -10,6 +10,7 @@ import Navigation from './components/routing/Navigation';
 import EventHandling from './components/interactive/EventHandling';
 import Counter from './components/interactive/Counter';
 import Input from './components/static/Input';
+import TrainerContainer from './components/interactive/lifting_state/TrainerContainer';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
         <Route path='/events' element={<EventHandling />} />
         <Route path='/state' element={<Counter />} />
       </Routes>
-
+          <TrainerContainer/>
     </Router>
   )
 }
