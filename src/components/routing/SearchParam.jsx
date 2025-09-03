@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router';
-import Trainer from './Trainer';
-import trainers from './trainers.json';
+import trainers from '../static/trainers.json';
 import { v4 as uuidv4 } from 'uuid';
+import Trainer from '../static/Trainer';
 
 export default function SearchParam() {
     // useSearchParams -> 'hook' that pulls the SEARCH parameters out of the router

@@ -10,7 +10,8 @@ export default function Navigation() {
             <Link to="/external">External Data</Link>
             <Link to="/params/:name">Route Params</Link>
             <Link to="/search">Search Params</Link>
-
+            <Link to="/events">Event Handling</Link>
+            <Link to="/state">State</Link>
         </nav>
     )
 }
