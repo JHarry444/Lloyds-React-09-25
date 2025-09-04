@@ -1,17 +1,22 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import {ThemeContext} from "../../themeContext";
 
 export default function Navigation() {
+
+    const {theme, toggleTheme} = useContext(ThemeContext);
     return (
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/images">Images</Link>
-            <Link to="/components">Components</Link>
-            <Link to="/props">Props</Link>
-            <Link to="/external">External Data</Link>
-            <Link to="/params/:name">Route Params</Link>
-            <Link to="/search">Search Params</Link>
-            <Link to="/events">Event Handling</Link>
-            <Link to="/state">State</Link>
+            <Link to="/" className={theme}>Home</Link>
+            <Link to="/images" className={theme}>Images</Link>
+            <Link to="/components" className={theme}>Components</Link>
+            <Link to="/props" className={theme} >Props</Link>
+            <Link to="/external" className={theme}>External Data</Link>
+            <Link to="/params/:name" className={theme}>Route Params</Link>
+            <Link to="/search" className={theme} >Search Params</Link>
+            <Link to="/events" className={theme}>Event Handling</Link>
+            <Link to="/state" className={theme}>State</Link>
+            <button onClick={toggleTheme}>{theme}</button>
         </nav>
     )
 }

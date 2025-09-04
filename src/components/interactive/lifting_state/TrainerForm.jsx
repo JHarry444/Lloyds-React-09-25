@@ -17,6 +17,14 @@ export default function TrainerForm({ setTrainers }) {
         //     return newTrainersArray;
         // })
         setTrainers(currentTrainers => [ ...currentTrainers, { name, age, specialism }]);
+
+        fetch("http://localhost:8080/trainers", {
+            method: 'post',
+            body: JSON.stringify({name, age, specialism}),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(res => console.log("trainer added successfully"));
         setName("");
         setAge(0);
         setSpecialism("");

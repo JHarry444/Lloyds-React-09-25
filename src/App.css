@@ -47,3 +47,8 @@ nav {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+
+a.dark {
+  color: white;
+}
